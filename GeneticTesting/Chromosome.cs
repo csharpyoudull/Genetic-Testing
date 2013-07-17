@@ -56,8 +56,10 @@ namespace GeneticTesting
             var mutated = string.Empty;
             for (var i = 0; i < second.Length; i++) 
             {
-                mutated += second[i].Equals('0') ? '1' : '0';
+                var randomValue = Randomizer.Next(0, 1);
+                mutated += randomValue.Equals(0) ? second[i].ToString() : Randomizer.Next(0, 1).ToString() ;
             }
+
             var newDna = Chromosome.FromBinaryString(first + mutated, Randomizer);
             this.Clear();
             this.AddRange(newDna);

@@ -13,7 +13,7 @@ namespace GeneticTesting
             var characterSet = "abcdefghijklmnopqrstuvwxyz";
             characterSet += characterSet.ToUpper();
             characterSet += "!.?, 0123456789";
-            var ga = new GeneticAlgorithm("Hello world, I am Steve", 1500, 10000, .7, .3, characterSet);
+            var ga = new GeneticAlgorithm("Hello world, I am Steve", 500, 1000, .7, .3, characterSet);
             Console.ReadLine();
         }
     }
